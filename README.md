@@ -45,7 +45,7 @@ This is the current result of my various LUA adventures over the years. I hope t
   Usage:
   > file.write("lua.scene.log", "Play the lightning animation... now!")
   >
-  **Simple.. write a new line to the specified file without overwriting anything. You can pass a relative path in the filename variable but it will otherwise output to the EXE folder by default.**
+  **Simple.. write a new line to the specified file without overwriting anything. You can pass a relative path in the filename parameter but it will break chat logging (it dumps the entire externalmsg.txt file). It outputs to the EXE folder by default.**
 
 ## 
 ***qlog()*** A function that simplifies all logging into one easy command. All lines are written to the *lua.scene.log* file in the EXE folder.
