@@ -96,14 +96,23 @@ end
 --Set Global Variables
 gvar.set("timestamp", "false")
 gvar.set("debugmsg", "false")
-gvar.set("logtoconsole", "true")
 gvar.set("time", tonumber(date("%H%M")))
+
+--Detect if console plugin is installed
+local conmsg = openfile("..\\EXE\\console.dll","r")
+if conmsg then
+    closefile(conmsg)
+    --Disable log to console by changing this line
+    gvar.set("logtoconsole", "true")
+else
+    gvar.set("logtoconsole", "false")
+end
 
 --Detect if external message plugin is installed
 local exmsg = openfile("..\\EXE\\externalmsg.dll","r")
 if exmsg then
     closefile(exmsg)
-    --Enable log to chat here
+    --Disable log to chat by changing this line
     gvar.set("logtochat", "true")
 else
     gvar.set("logtochat", "false")
