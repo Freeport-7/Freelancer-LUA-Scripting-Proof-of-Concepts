@@ -1,16 +1,12 @@
-dofile('..\\DATA\\SCRIPTS\\QLog.lua')
-qlog("gvar: timestamp : " .. gvar.get("timestamp"))
-qlog("gvar: time : " .. gvar.get("time"))
-qlog("gvar: logtoconsole : " .. gvar.get("logtoconsole"), 1)
-qlog("gvar: logtochat : " .. gvar.get("logtochat"), 0)
+--This file was included only as an example of how to use the new core functions. Credit to IrateRedKite for the original example.
 
 local to_rain = iif.Le(gvar.get("time"),1425)
 
 if to_rain == 1 then --Checks if the time is before or equal to 14:25. If true, the below scene will play.
 
 duration = 3000
-qlog('Current time before 1426...', 1)
-qlog('Loading default entities...', 1)
+qlog("Current time before 1426...", 1)
+qlog("Loading default entities...", 1)
 entities =
 {
 	{
@@ -680,7 +676,7 @@ entities =
 	}
 }
 
-qlog('Setting up default timeline...')
+qlog("Setting up default timeline...")
 events =
 {
 	{
@@ -808,8 +804,8 @@ events =
 elseif to_rain == 0 then --Checks if the time is after to 14:25. If true, the below scene will play (with rain!).
 
 duration = 3000
-qlog('Current time after 1425...', 1)
-qlog('Loading alternate entities...', 1)
+qlog("Current time after 1425...", 1)
+qlog("Loading alternate entities...", 1)
 entities =
 {
 	{
@@ -1436,7 +1432,7 @@ entities =
 	}
 }
 
-qlog('Setting up alternate timeline...')
+qlog("Setting up alternate timeline...")
 events =
 {
 	{
@@ -1630,4 +1626,4 @@ events =
 
 end
 
-qlog('Finished...' .. "\n\n")
+qlog("Finished..." .. "\n\n")
