@@ -34,7 +34,7 @@ This is the current result of my various LUA adventures over the years. I hope t
   Usage:
   > gvar.set("timestamp", "false")
   >
-  > if gvar.get("timestamp") == "false") then
+  > if gvar.get("timestamp") == "false" then
   >
   **Sets and reads global variables that are accessible throughout the entire scene script and all functions.**
 
@@ -65,6 +65,6 @@ This is the current result of my various LUA adventures over the years. I hope t
   > 
 
 ## 
-Add these files to your DATA\SCRIPTS folder to test out. Will require the *Console* and *External Message* plugins if you want to use the log to console/chat features.
+Extract to game folder to test out. Will require the *Console* and *External Message* plugins if you want to use the log to console/chat features.
 
 http://www.adoxa.altervista.org/freelancer/plugins.html
