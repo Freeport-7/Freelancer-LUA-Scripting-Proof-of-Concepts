@@ -62,12 +62,6 @@ tf = function(o)
     return 0
 end
 
---Timestamp return
---Usage: local var = "[" .. ts(n) .. "] :: " .. var
---ts = function(o)
---    return tostring(date("%Y-%m-%d-%H:%M:%S"))
---end
-
 --Global variable functions
 --Usage1: gvar.set("var", "val")
 --Usage2: if gvar.get("var") == "val" then
@@ -81,9 +75,6 @@ end
 
 --File IO functions (WIP)
 file = {}
---file["read"] = function(filename)
---    return readfrom(filename)
---end
 --Appends to file, will not clear it first
 --Usage: file.write("filename", message)
 file["write"] = function(file, message)
@@ -98,22 +89,3 @@ end
 gvar.set("timestamp", "false")
 gvar.set("debugmsg", "false")
 gvar.set("time", tonumber(date("%H%M")))
-
-
---print("debug - " .. tostring(debug))--debug - function: 06F56040
---error("No override found")--LuaScriptParser.cpp : ERROR: General:THORN: LUA error <No override found>.
-
-
---build = {}
---build["pairs"] = function(tableName)
---  readfrom("QLog.ini")
---  local raw_data = read()
---  print("pairs - raw: " .. tostring(raw_data))
---  local i = strfind(raw_data, "(a*%x003d)")
---  print("pairs - index: " .. tostring(i))
---  local x = strsub(raw_data, 1, i)
---  local y = strsub(raw_data, i+1, strlen(raw_data))
---  print("pairs - key, pair: " .. tostring(x) .. " > " .. tostring(y))
---end
-
---build.pairs(blah)
